@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AGE IN HOURS </title>
+    <style>
+        body{
+            font-family: Arial,  sans-serif;
+            text-align: center;
+            margin-top: 100px;
+        }
+    </style>
+
+</head>
+<body>
+    <h1>Calculate Your Age In Hours</h1>
+    <button onclick="calculateAgeInHours()">calculate</button>
+    <h2 id="result"></h2>
+    <script>
+        function calculateAgeInHours(){
+            const ageInYears = prompt("please enter your age");
+            if( ageInYears ==='' || ageInYears <0 || isNaN(ageInYears)|| ageInYears===null){
+                document.getElementById('result').innerText='please enter your age !';
+            }else{
+                const ageInHours = ageInYears*365*24;
+                document.getElementById('result').innerHTML = 'you are '+ ageInHours +'hours old'
+            }
+           
+        }
+    </script>
+</body>
+</html>
